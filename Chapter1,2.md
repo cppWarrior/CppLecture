@@ -5,12 +5,11 @@
 
 Chapter 1, 2는 C언어를 배웠다는 가정 하에 C++에 추가된 요소들을 설명하는 챕터들입니다.
 
-크게
-
 1. 함수 오버로딩(Function Overloading)
 2. 이름공간 (Namespace)
 3. 참조자 ‘&’
 
+이 3가지만 알고 넘어가면 됩니다.
 
 그 외에도 inline함수, Bool자료형, new&delete가 있지만 나올 때 잠시 설명하면 되는 수준이거나 뒤에 더 자세히 다루는 내용이기에 생략했습니다.
 
@@ -74,7 +73,8 @@ namespace ProgrammerB{
 
 ```cpp
 programmerA::MyFunc();
-programmerB::MyFunc(); ```
+programmerB::MyFunc(); 
+```
 와 같은 형태로 사용하시면 됩니다.
 
 
