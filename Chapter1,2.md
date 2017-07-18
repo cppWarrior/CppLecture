@@ -114,7 +114,10 @@ using std::cin; ```
 을 선언해서 사용해야 합니다.
 
 하지만 using을 계속 쓰면 불편하니 
-```cpp using namespace std;```
+
+```cpp 
+using namespace std;```
+
 로 한 번에 사용합니다. 
 
 책에 있는 설명 그대로 따오면 
