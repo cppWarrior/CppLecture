@@ -110,13 +110,15 @@ MyFunc();
 우리가 흔히 썼던 cout, cin 도 사실
 ```cpp
 using std::cout;
-using std::cin; ```
+using std::cin;
+```
 을 선언해서 사용해야 합니다.
 
 하지만 using을 계속 쓰면 불편하니 
 
 ```cpp 
-using namespace std;```
+using namespace std;
+```
 
 로 한 번에 사용합니다. 
 
@@ -157,7 +159,8 @@ void swap(int a, int b){
 int temp;
 temp = a;
 a = b;
-b = temp; } ```
+b = temp; } 
+```
 
 로 정의되어 있는 함수를 사용하면
 원하는대로 실행되지 않죠… 그 이유는 함수에 변수의 참조된 값만이 전달되기 때문입니다.
@@ -169,7 +172,8 @@ void swap(int *a, int *b){
 int temp;
 temp = *a;
 *a = *b;
-*b = *temp; }```
+*b = *temp; }
+```
 
 여기서 방금 알게된 참조자를 사용하면
 
@@ -178,7 +182,8 @@ void swap(int &a, int &b){
 int temp;
 temp = a;
 a = b;
-b = temp;}```
+b = temp;}
+```
 
 로 간단하게 사용할 수 있습니다.
 
