@@ -1,25 +1,24 @@
-# C++¿­Ç÷°­ÀÇ Chapter1,2
+# C++ì—´í˜ˆê°•ì˜ Chapter1,2
 
 
-## ¾î¶² ³»¿ëÀÌ ÀÖ³ª¿ä?
+## ì–´ë–¤ ë‚´ìš©ì´ ìžˆë‚˜ìš”?
 
-Chapter 1, 2´Â C¾ð¾î¸¦ ¹è¿ü´Ù´Â °¡Á¤ ÇÏ¿¡ C++¿¡ Ãß°¡µÈ ¿ä¼ÒµéÀ» ¼³¸íÇÏ´Â Ã©ÅÍµéÀÔ´Ï´Ù.
+Chapter 1, 2ëŠ” Cì–¸ì–´ë¥¼ ë°°ì› ë‹¤ëŠ” ê°€ì • í•˜ì— C++ì— ì¶”ê°€ëœ ìš”ì†Œë“¤ì„ ì„¤ëª…í•˜ëŠ” ì±•í„°ë“¤ìž…ë‹ˆë‹¤.
 
-Å©°Ô 3°¡Áö¸¦ ¼³¸íÇÏ´Âµ¥
+í¬ê²Œ
 
-Ã¹ ¹øÂ°, ÇÔ¼ö ¿À¹ö·Îµù(Function Overloading)
-µÎ ¹øÂ°, ÀÌ¸§°ø°£ (Namespace)
-¼¼ ¹øÂ°, ÂüÁ¶ÀÚ ¡®&¡¯
-
-ÀÔ´Ï´Ù!
-
-±× ¿Ü¿¡µµ inlineÇÔ¼ö, BoolÀÚ·áÇü, new&delete°¡ ÀÖÁö¸¸ ³ª¿Ã ¶§ Àá½Ã ¼³¸íÇÏ¸é µÇ´Â ¼öÁØÀÌ°Å³ª µÚ¿¡ ´õ ÀÚ¼¼È÷ ´Ù·ç´Â ³»¿ëÀÌ±â¿¡ »ý·«Çß½À´Ï´Ù.
+1. í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©(Function Overloading)
+2. ì´ë¦„ê³µê°„ (Namespace)
+3. ì°¸ì¡°ìž â€˜&â€™
 
 
-### ÇÔ¼ö ¿À¹ö·Îµù
+ê·¸ ì™¸ì—ë„ inlineí•¨ìˆ˜, Boolìžë£Œí˜•, new&deleteê°€ ìžˆì§€ë§Œ ë‚˜ì˜¬ ë•Œ ìž ì‹œ ì„¤ëª…í•˜ë©´ ë˜ëŠ” ìˆ˜ì¤€ì´ê±°ë‚˜ ë’¤ì— ë” ìžì„¸ížˆ ë‹¤ë£¨ëŠ” ë‚´ìš©ì´ê¸°ì— ìƒëžµí–ˆìŠµë‹ˆë‹¤.
 
-C¾ð¾î¸¦ ¹è¿üÀ» ¶§¸¦ »ý°¢ÇØº¸¸é...
-µ¿ÀÏÇÑ ÀÌ¸§ÀÇ ÇÔ¼ö¸¦ Á¤ÀÇÇÒ ¶§ ÄÄÆÄÀÏ ¿À·ù°¡ ¹ß»ýÇÕ´Ï´Ù.
+
+### í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©
+
+Cì–¸ì–´ë¥¼ ë°°ì› ì„ ë•Œë¥¼ ìƒê°í•´ë³´ë©´...
+ë™ì¼í•œ ì´ë¦„ì˜ í•¨ìˆ˜ë¥¼ ì •ì˜í•  ë•Œ ì»´íŒŒì¼ ì˜¤ë¥˜ê°€ ë°œìƒí•©ë‹ˆë‹¤.
 
 ```cpp
 int MyFunc(int num){
@@ -31,55 +30,55 @@ int MyFunc(int a, int b){
 	Return a+b;
 }
 
-//ÄÄÆÄÀÏ ¿¡·¯!!!
+//ì»´íŒŒì¼ ì—ëŸ¬!!!
 ```
 
-ÇÏÁö¸¸ C++¿¡¼­´Â ¸Å°³º¯¼öÀÇ °¹¼ö°¡ ´Ù¸£¸é °¡´ÉÇÏ¸ç, ÀÌ¸¦ 'ÇÔ¼ö ¿À¹ö·Îµù'ÀÌ¶ó°í ÇÕ´Ï´Ù.
+í•˜ì§€ë§Œ C++ì—ì„œëŠ” ë§¤ê°œë³€ìˆ˜ì˜ ê°¯ìˆ˜ê°€ ë‹¤ë¥´ë©´ ê°€ëŠ¥í•˜ë©°, ì´ë¥¼ 'í•¨ìˆ˜ ì˜¤ë²„ë¡œë”©'ì´ë¼ê³  í•©ë‹ˆë‹¤.
 
-¿¹¿Ü»çÇ×À¸·Î 
+ì˜ˆì™¸ì‚¬í•­ìœ¼ë¡œ 
 
 ```cpp
-int MyFunc(int n){ ¡¦ }
-void MyFunc(int n){ ¡¦ } 
+int MyFunc(int n){ â€¦ }
+void MyFunc(int n){ â€¦ } 
 ```
-°°Àº °æ¿ì¿¡´Â ÄÄÆÄÀÏ ¿¡·¯°¡ ³³´Ï´Ù.
+ê°™ì€ ê²½ìš°ì—ëŠ” ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë‚©ë‹ˆë‹¤.
 
-¿Ö³ÄÇÏ¸é ÇÔ¼ö MyFunc()À» »ç¿ëÇßÀ» ¶§, ¹ÝÈ¯ÇüÀÌ intÀÎÁö voidÀÎÁö ¾Ë ¼ö ¾ø±â ¶§¹®ÀÔ´Ï´Ù.
+ì™œëƒí•˜ë©´ í•¨ìˆ˜ MyFunc()ì„ ì‚¬ìš©í–ˆì„ ë•Œ, ë°˜í™˜í˜•ì´ intì¸ì§€ voidì¸ì§€ ì•Œ ìˆ˜ ì—†ê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.
 
 
 
-### ÀÌ¸§°ø°£ (namespace)
+### ì´ë¦„ê³µê°„ (namespace)
 
-C++À» Ã³À½ ¹è¿ì¸é¼­ 'using namespace std'¸¦ ÀÚÁÖ º¸¾ÒÀ» °ÍÀÔ´Ï´Ù.
-namespace´Â Å« ÇÁ·ÎÁ§Æ®¸¦ ³ª´²¼­ ÀÛ¾÷À» ÇÒ ¶§ º¯¼ö³ª ÇÔ¼ö°¡ °ãÄ¡´Â °ÍÀ» ¹æÁöÇÏ±â À§ÇØ ¸¸µé¾îÁ³½À´Ï´Ù.
+C++ì„ ì²˜ìŒ ë°°ìš°ë©´ì„œ 'using namespace std'ë¥¼ ìžì£¼ ë³´ì•˜ì„ ê²ƒìž…ë‹ˆë‹¤.
+namespaceëŠ” í° í”„ë¡œì íŠ¸ë¥¼ ë‚˜ëˆ ì„œ ìž‘ì—…ì„ í•  ë•Œ ë³€ìˆ˜ë‚˜ í•¨ìˆ˜ê°€ ê²¹ì¹˜ëŠ” ê²ƒì„ ë°©ì§€í•˜ê¸° ìœ„í•´ ë§Œë“¤ì–´ì¡ŒìŠµë‹ˆë‹¤.
 
-¿¹¸¦µé¾î A ÇÁ·Î±×·¡¸Ó¿Í B ÇÁ·Î±×·¡¸Ó°¡ µ¿ÀÏÇÑ ÇÔ¼ö void MyFunc()¸¦ ¸¸µé¾ú´Ù¸é, ÄÄÆÄÀÏ ½Ã ¿¡·¯°¡ ³¯ ¼ö ¹Û¿¡ ¾ø½À´Ï´Ù. 
+ì˜ˆë¥¼ë“¤ì–´ A í”„ë¡œê·¸ëž˜ë¨¸ì™€ B í”„ë¡œê·¸ëž˜ë¨¸ê°€ ë™ì¼í•œ í•¨ìˆ˜ void MyFunc()ë¥¼ ë§Œë“¤ì—ˆë‹¤ë©´, ì»´íŒŒì¼ ì‹œ ì—ëŸ¬ê°€ ë‚  ìˆ˜ ë°–ì— ì—†ìŠµë‹ˆë‹¤. 
 
-ÇÏÁö¸¸ namespace¸¦ È°¿ëÇÏ¸é
+í•˜ì§€ë§Œ namespaceë¥¼ í™œìš©í•˜ë©´
 
 ```cpp
 namespace programmerA{
-	void MyFunc() {¡¦}
+	void MyFunc() {â€¦}
 } 
 
 namespace ProgrammerB{
-	Void MyFunc() {¡¦}
+	Void MyFunc() {â€¦}
 }
 ```
 
-·Î ÀÌ¸§À¸·Î ÀÎÇÑ ÄÄÆÄÀÏ ¿¡·¯°¡ ³ªÁö ¾Ê½À´Ï´Ù,
+ë¡œ ì´ë¦„ìœ¼ë¡œ ì¸í•œ ì»´íŒŒì¼ ì—ëŸ¬ê°€ ë‚˜ì§€ ì•ŠìŠµë‹ˆë‹¤,
 
-¼­·Î ´Ù¸¥ namespace¿¡ ÀÖ´Â MyFunc()¸¦ »ç¿ëÇÏ·Á¸é
+ì„œë¡œ ë‹¤ë¥¸ namespaceì— ìžˆëŠ” MyFunc()ë¥¼ ì‚¬ìš©í•˜ë ¤ë©´
 
-:: À» »ç¿ëÇÏ¿©
+:: ì„ ì‚¬ìš©í•˜ì—¬
 
 ```cpp
 programmerA::MyFunc();
 programmerB::MyFunc(); ```
-¿Í °°Àº ÇüÅÂ·Î »ç¿ëÇÏ½Ã¸é µË´Ï´Ù.
+ì™€ ê°™ì€ í˜•íƒœë¡œ ì‚¬ìš©í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
 
 
-½ÉÁö¾î namespace ¾È¿¡ namespace¸¦ ³ÖÀ» ¼ö µµ ÀÖ½À´Ï´Ù.
+ì‹¬ì§€ì–´ namespace ì•ˆì— namespaceë¥¼ ë„£ì„ ìˆ˜ ë„ ìžˆìŠµë‹ˆë‹¤.
 
 
 ```cpp
@@ -90,62 +89,65 @@ namespace programmerC{
 	int num = 4;}
 }
 ```
-namespace ¾È¿¡ ÀÖ´Â namespace¸¦ »ç¿ëÇÏ·Á¸é ::À» ÇÑ¹ø ´õ »ç¿ëÇØÁÖ½Ã¸é µË´Ï´Ù.
+namespace ì•ˆì— ìžˆëŠ” namespaceë¥¼ ì‚¬ìš©í•˜ë ¤ë©´ ::ì„ í•œë²ˆ ë” ì‚¬ìš©í•´ì£¼ì‹œë©´ ë©ë‹ˆë‹¤.
 
 ```cpp
 std::cout<< programmerC::SubOne::num;
 std::cout<< programmerC::SubTwo::num;
  ```
-À§ ¿¹´Â °á°úÀûÀ¸·Î 3,4¸¦ Ãâ·ÂÇÏ°Ô µË´Ï´Ù.
+ìœ„ ì˜ˆëŠ” ê²°ê³¼ì ìœ¼ë¡œ 3,4ë¥¼ ì¶œë ¥í•˜ê²Œ ë©ë‹ˆë‹¤.
 
-namespace¸¦ »ç¿ëÇÏ¸é ::À» ÀÚÁÖ ¾²°ÔµÇ´Âµ¥ ÀÌ°Ô ±ÍÂú¾ÆÁú ¼ö ÀÖ½À´Ï´Ù.
-±×·¡¼­ usingÀ» »ç¿ëÇØ¼­
+namespaceë¥¼ ì‚¬ìš©í•˜ë©´ ::ì„ ìžì£¼ ì“°ê²Œë˜ëŠ”ë° ì´ê²Œ ê·€ì°®ì•„ì§ˆ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+ê·¸ëž˜ì„œ usingì„ ì‚¬ìš©í•´ì„œ
 
 ```cpp
-using programmerA::Myfunc; // ex2-1¿¡ »ç¿ëµÈ namespace
+using programmerA::Myfunc; // ex2-1ì— ì‚¬ìš©ëœ namespace
 MyFunc();
 ```
-ÀÌ·± ½ÄÀ¸·Î ÀÌ¸§°ø°£ ÁöÁ¤ ¾øÀÌ ÇÔ¼ö¸¦ È£Ãâ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
+ì´ëŸ° ì‹ìœ¼ë¡œ ì´ë¦„ê³µê°„ ì§€ì • ì—†ì´ í•¨ìˆ˜ë¥¼ í˜¸ì¶œ í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 
-¿ì¸®°¡ ÈçÈ÷ ½è´ø cout, cin µµ »ç½Ç
+ìš°ë¦¬ê°€ í”ížˆ ì¼ë˜ cout, cin ë„ ì‚¬ì‹¤
 ```cpp
 using std::cout;
 using std::cin; ```
-À» ¼±¾ðÇØ¼­ »ç¿ëÇØ¾ß ÇÕ´Ï´Ù.
+ì„ ì„ ì–¸í•´ì„œ ì‚¬ìš©í•´ì•¼ í•©ë‹ˆë‹¤.
 
-ÇÏÁö¸¸ usingÀ» °è¼Ó ¾²¸é ºÒÆíÇÏ´Ï 
+í•˜ì§€ë§Œ usingì„ ê³„ì† ì“°ë©´ ë¶ˆíŽ¸í•˜ë‹ˆ 
 ```cpp using namespace std;```
-·Î ÇÑ ¹ø¿¡ »ç¿ëÇÕ´Ï´Ù. 
+ë¡œ í•œ ë²ˆì— ì‚¬ìš©í•©ë‹ˆë‹¤. 
 
-Ã¥¿¡ ÀÖ´Â ¼³¸í ±×´ë·Î µû¿À¸é 
-using namespace´Â
-¡®ÀÌ¸§°ø°£ std¿¡ ¼±¾ðµÈ ¸ðµç °Í¿¡ ´ëÇØ ÀÌ¸§°ø°£ ÁöÁ¤ÀÇ »ý·«¡¯À» ¸í·ÉÇÏ´Â °Í ÀÔ´Ï´Ù.
+ì±…ì— ìžˆëŠ” ì„¤ëª… ê·¸ëŒ€ë¡œ ë”°ì˜¤ë©´ 
+using namespaceëŠ”
+â€˜ì´ë¦„ê³µê°„ stdì— ì„ ì–¸ëœ ëª¨ë“  ê²ƒì— ëŒ€í•´ ì´ë¦„ê³µê°„ ì§€ì •ì˜ ìƒëžµâ€™ì„ ëª…ë ¹í•˜ëŠ” ê²ƒ ìž…ë‹ˆë‹¤.
 
 
-###ÂüÁ¶ÀÚ
+###ì°¸ì¡°ìž
 
-ÂüÁ¶ÀÚ´Â ½±°Ô ¸»ÇÏ¸é º¯¼öÀÇ º°¸íÀÌ¶ó°í »ý°¢ÇÏ½Ã¸é µË´Ï´Ù.
+ì°¸ì¡°ìžëŠ” ì‰½ê²Œ ë§í•˜ë©´ ë³€ìˆ˜ì˜ ë³„ëª…ì´ë¼ê³  ìƒê°í•˜ì‹œë©´ ë©ë‹ˆë‹¤.
+
 ```cpp
 int num1 = 5;
 int &num2 = num1;
 ```
-ÂüÁ¶ÀÚ¸¦ ¼±¾ðÇÏ´Â ¼ö¿¡ Á¦ÇÑÀÌ ¾øÀ¸¸ç, ÂüÁ¶ÀÚ¸¦ ´ë»óÀ¸·Î ÂüÁ¶ÀÚ¸¦ ¼±¾ðÇÒ ¼ö ÀÖ½À´Ï´Ù.
+
+ì°¸ì¡°ìžë¥¼ ì„ ì–¸í•˜ëŠ” ìˆ˜ì— ì œí•œì´ ì—†ìœ¼ë©°, ì°¸ì¡°ìžë¥¼ ëŒ€ìƒìœ¼ë¡œ ì°¸ì¡°ìžë¥¼ ì„ ì–¸í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
 ```cpp
-//À§ ¿¹Á¦
+//ìœ„ ì˜ˆì œ
 int &num3 = num2;
 ```
 
-ÂüÁ¶ÀÚ´Â º¯¼ö¿¡ ´ëÇØ¼­¸¸ ¼±¾ðµÇ°í, ¼±¾ðÇÏ´Â ¼ø°£ ´Ù¸¥ º¯¼ö¸¦ ÂüÁ¶ÇØ¾ß¸¸ ÇÕ´Ï´Ù.
+ì°¸ì¡°ìžëŠ” ë³€ìˆ˜ì— ëŒ€í•´ì„œë§Œ ì„ ì–¸ë˜ê³ , ì„ ì–¸í•˜ëŠ” ìˆœê°„ ë‹¤ë¥¸ ë³€ìˆ˜ë¥¼ ì°¸ì¡°í•´ì•¼ë§Œ í•©ë‹ˆë‹¤.
+
 ```cpp
 int &num4; ( X )
 ```
 
-¾µ¸ð¾ø¾î º¸ÀÌ´Â ÂüÁ¶ÀÚ´Â ÇÔ¼ö¿¡¼­ Àß È°¿ëµË´Ï´Ù.
+ì“¸ëª¨ì—†ì–´ ë³´ì´ëŠ” ì°¸ì¡°ìžëŠ” í•¨ìˆ˜ì—ì„œ ìž˜ í™œìš©ë©ë‹ˆë‹¤.
  
-Æ÷ÀÎÅÍ¸¦ Ã³À½¹è¿ü´ø ±â¾ïÀ» ´õµë¾îº¸¸é
-µÎ º¯¼öÀÇ °ªÀ» ¹Ù²Ù·Á°í ÇÒ ¶§,
+í¬ì¸í„°ë¥¼ ì²˜ìŒë°°ì› ë˜ ê¸°ì–µì„ ë”ë“¬ì–´ë³´ë©´
+ë‘ ë³€ìˆ˜ì˜ ê°’ì„ ë°”ê¾¸ë ¤ê³  í•  ë•Œ,
 
 ```cpp
 void swap(int a, int b){
@@ -153,10 +155,12 @@ int temp;
 temp = a;
 a = b;
 b = temp; } ```
-·Î Á¤ÀÇµÇ¾î ÀÖ´Â ÇÔ¼ö¸¦ »ç¿ëÇÏ¸é
-¿øÇÏ´Â´ë·Î ½ÇÇàµÇÁö ¾ÊÁÒ¡¦ ±× ÀÌÀ¯´Â ÇÔ¼ö¿¡ º¯¼öÀÇ ÂüÁ¶µÈ °ª¸¸ÀÌ Àü´ÞµÇ±â ¶§¹®ÀÔ´Ï´Ù.
 
-ÇÏÁö¸¸ Æ÷ÀÎÅÍ¸¦ »ç¿ëÇÏ¿© ÁÖ¼Ò°ªÀ» Àü´ÞÇÏ¸é ¿øÇÏ´Â °á°ú¸¦ ¾òÀ» ¼ö ÀÖ½À´Ï´Ù.
+ë¡œ ì •ì˜ë˜ì–´ ìžˆëŠ” í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´
+ì›í•˜ëŠ”ëŒ€ë¡œ ì‹¤í–‰ë˜ì§€ ì•Šì£ â€¦ ê·¸ ì´ìœ ëŠ” í•¨ìˆ˜ì— ë³€ìˆ˜ì˜ ì°¸ì¡°ëœ ê°’ë§Œì´ ì „ë‹¬ë˜ê¸° ë•Œë¬¸ìž…ë‹ˆë‹¤.
+
+í•˜ì§€ë§Œ í¬ì¸í„°ë¥¼ ì‚¬ìš©í•˜ì—¬ ì£¼ì†Œê°’ì„ ì „ë‹¬í•˜ë©´ ì›í•˜ëŠ” ê²°ê³¼ë¥¼ ì–»ì„ ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
+
 ```cpp
 void swap(int *a, int *b){
 int temp;
@@ -164,17 +168,19 @@ temp = *a;
 *a = *b;
 *b = *temp; }```
 
-¿©±â¼­ ¹æ±Ý ¾Ë°ÔµÈ ÂüÁ¶ÀÚ¸¦ »ç¿ëÇÏ¸é
+ì—¬ê¸°ì„œ ë°©ê¸ˆ ì•Œê²Œëœ ì°¸ì¡°ìžë¥¼ ì‚¬ìš©í•˜ë©´
+
 ```cpp
 void swap(int &a, int &b){
 int temp;
 temp = a;
 a = b;
 b = temp;}```
-·Î °£´ÜÇÏ°Ô »ç¿ëÇÒ ¼ö ÀÖ½À´Ï´Ù.
 
-ÀÌ°ÍÀÌ °¡´ÉÇÑ ÀÌÀ¯´Â ¾Õ¿¡¼­ ÂüÁ¶ÀÚ°¡ º¯¼öÀÇ º°¸íÀÌ¶ó°í Çß´Âµ¥,
-»ç½Ç ÂüÁ¶ÀÚ´Â ÂüÁ¶µÈ º¯¼ö°¡ ÇÒ´çµÈ ¸Þ¸ð¸® °ø°£À» °øÀ¯°í ÀÖ½À´Ï´Ù.
-ÂüÁ¶ÀÚ´Â º¯¼ö¸í »Ó¸¸¾Æ´Ï¶ó º¯¼öÀÇ ÁÖ¼Ò±îÁö ÂüÁ¶ÇÏ°í ÀÖ¾ú´ø °ÍÀÔ´Ï´Ù...
+ë¡œ ê°„ë‹¨í•˜ê²Œ ì‚¬ìš©í•  ìˆ˜ ìžˆìŠµë‹ˆë‹¤.
 
-µû¶ó¼­ Æ÷ÀÎÅÍ·Î º¯¼öÀÇ ÁÖ¼Ò°ªÀ» Àü´ÞÇÒ ¼ö°í¾øÀÌ °£´ÜÇÏ°Ô ÂüÁ¶ÀÚ¸¦ »ç¿ëÇÏ¸é µË´Ï´Ù. 
+ì´ê²ƒì´ ê°€ëŠ¥í•œ ì´ìœ ëŠ” ì•žì—ì„œ ì°¸ì¡°ìžê°€ ë³€ìˆ˜ì˜ ë³„ëª…ì´ë¼ê³  í–ˆëŠ”ë°,
+ì‚¬ì‹¤ ì°¸ì¡°ìžëŠ” ì°¸ì¡°ëœ ë³€ìˆ˜ê°€ í• ë‹¹ëœ ë©”ëª¨ë¦¬ ê³µê°„ì„ ê³µìœ ê³  ìžˆìŠµë‹ˆë‹¤.
+ì°¸ì¡°ìžëŠ” ë³€ìˆ˜ëª… ë¿ë§Œì•„ë‹ˆë¼ ë³€ìˆ˜ì˜ ì£¼ì†Œê¹Œì§€ ì°¸ì¡°í•˜ê³  ìžˆì—ˆë˜ ê²ƒìž…ë‹ˆë‹¤...
+
+ë”°ë¼ì„œ í¬ì¸í„°ë¡œ ë³€ìˆ˜ì˜ ì£¼ì†Œê°’ì„ ì „ë‹¬í•  ìˆ˜ê³ ì—†ì´ ê°„ë‹¨í•˜ê²Œ ì°¸ì¡°ìžë¥¼ ì‚¬ìš©í•˜ë©´ ë©ë‹ˆë‹¤. 
